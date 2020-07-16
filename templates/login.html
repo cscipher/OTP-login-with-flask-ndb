@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><u>LOGIN WITH PASSWORD!</u></h1>
+    <div>
+        <a href="/login">Login</a>
+        &nbsp;
+        <a href="/signup">Signup</a>
+        &nbsp;
+        <a href="/protected">protected</a>
+    </div>
+    <hr>
+    <form action="" id="formid" method="POST">
+        <label for="email">Email address &nbsp;</label>
+        <input type="email" placeholder="example@example.com" name="getmail" id="email">
+        <br>
+        <label for="password">Password &nbsp;</label>
+        <input type="password"  name="getpass" id="password">
+        <br>
+        <input type="submit" name="button_1" value="Login">
+        
+        <p>Login with <a href="/getotp">OTP!</a></p>
+        <p>New here? <a href="/signup">signup!</a></p>
+    
+        {%if check==None%}
+        <div></div>
+        {%elif check==False%}
+            <div style="color: red;">Login failed! Check password or email</div>
+        {%elif check==True%}
+            <br>
+            <br>
+            <div style="color: red;">User Not Found!</div>
+        {%endif%}
+
+    
+    </form>
+
+    
+    <script>
+        document.getElementById("otpbtn").onclick = changeurl;
+
+        function changeurl() {
+            document.getElementById("formid").action = '/getotp';       
+        }
+    </script>
+
+
+
+</body>
+</html>

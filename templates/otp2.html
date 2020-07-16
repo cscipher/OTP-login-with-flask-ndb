@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OTP LOGIN!</h1> 
+    <div>
+        <a href="/login">Login</a>
+        &nbsp;
+        <a href="/signup">Signup</a>
+        &nbsp;
+        <a href="/protected">protected</a>
+    </div>
+    <hr>
+    <form method="POST">
+        <label for="otp">OTP : </label>
+        <input type="password"  name="getotp" id="otp" required>
+        <button id="getotpbtn" type="submit" >Login</button>
+        <br>
+    </form>
+
+    {%if check==None%}
+        <div></div>
+    {%elif check==False%}
+        <div style="color: red;">Login failed! Incorrect OTP</div>
+    
+    {%endif%}
+
+    <script>
+        document.getElementById("openbtn").onclick = enablefield;
+
+        function enablefield(){
+            document.getElementById("getotp").disabled = false;
+            document.getElementById("getotpbtn").disabled = false;
+        }
+    </script>
+
+
+</body>
+</html>

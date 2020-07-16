@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OTP LOGIN!</h1> 
+    <div>
+        <a href="/login">Login</a>
+        &nbsp;
+        <a href="/signup">Signup</a>
+        &nbsp;
+        <a href="/protected">protected</a>
+    </div>
+    <hr>
+    <form method="POST">
+        <label for="for_email">Email address :</label>
+        <input placeholder="example@example.com" id="for_email" name="for_email" required>
+        <br>        
+        <button id="openbtn" type="submit">Send OTP</button>    
+    </form>
+    <br>
+
+    {%if check==False%}
+        <br>
+        <div style="color: red;">User not Found!</div>
+    {%endif%}
+
+
+
+</body>
+</html>
