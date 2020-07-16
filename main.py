@@ -6,7 +6,7 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'otp-prot-14ea8863b8f1.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'add your .json file name here with extension'
 app.config['SECRET_KEY'] = 'kuyrgfurbgwkethgbt' 
 app.config['ENV'] = 'development'
 
